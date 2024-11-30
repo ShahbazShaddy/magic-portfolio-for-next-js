@@ -44,7 +44,7 @@ export default function About(
     unstable_setRequestLocale(locale);
     const t = useTranslations();
     const {person, about, social, work } = renderContent(t);
-    const truncate = (str, n) => (str.length > n ? `${str.substr(0, n - 1)}...` : str);
+    const truncate = (str: string, n: number): string => (str.length > n ? `${str.substr(0, n - 1)}...` : str);
 
     const structure = [
         { 
