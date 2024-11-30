@@ -10,7 +10,7 @@ const createI18nContent = (t) => {
         role:      t("person.role"),
         avatar:    '/images/avatar.jpg',
         location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-        languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+        languages: ['English', 'Urdu']  // optional: Leave the array empty if you don't want to display languages
     }
 
     const newsletter = {
@@ -30,7 +30,7 @@ const createI18nContent = (t) => {
         {
             name: 'LinkedIn',
             icon: 'linkedin',
-            link: 'https://www.linkedin.com/company/once-ui/',
+            link: 'https://www.linkedin.com/in/dilawar-ali-02a2382a5/',
         },
         {
             name: 'X',
@@ -40,7 +40,7 @@ const createI18nContent = (t) => {
         {
             name: 'Email',
             icon: 'email',
-            link: 'mailto:example@gmail.com',
+            link: 'mailto:dilawar.zayer@gmail.com ',
         },
     ]
 
@@ -77,10 +77,10 @@ const createI18nContent = (t) => {
             title: t("about.work.title"),
             experiences: [
                 {
-                    company: 'FLY',
-                    timeframe: t("about.work.experiences.FLY.timeframe"),
-                    role: t("about.work.experiences.FLY.role"),
-                    achievements: t("about.work.experiences.FLY.achievements").split(";"),
+                    company: 'Department of Physics, University of the Punjab, Lahore, Pakistan',
+                    timeframe: t("about.work.experiences.Department of Physics, University of the Punjab, Lahore, Pakistan.timeframe"),
+                    role: t("about.work.experiences.Department of Physics, University of the Punjab, Lahore, Pakistan.role"),
+                    achievements: t("about.work.experiences.Department of Physics, University of the Punjab, Lahore, Pakistan.achievements").split(";"),
                     images: [ // optional: leave the array empty if you don't want to display images
                         {
                             src: '/images/projects/project-01/cover-01.jpg',
@@ -104,8 +104,8 @@ const createI18nContent = (t) => {
             title: 'Studies',
             institutions: [
                 {
-                    name: 'University of Jakarta',
-                    description: <>{t(`about.studies.institutions.University of Jakarta.description`)}</>,
+                    name: 'Department of Physics, University of the Punjab, Lahore, Pakistan',
+                    description: <>{t(`about.studies.institutions.Department of Physics, University of the Punjab, Lahore, Pakistan.description`)}</>,
                 },
                 {
                     name: 'Build the Future',

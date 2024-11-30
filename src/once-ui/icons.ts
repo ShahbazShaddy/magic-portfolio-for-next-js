@@ -32,7 +32,8 @@ import {
 	FaDiscord,
 	FaGithub,
 	FaLinkedin,
-	FaXTwitter
+	FaXTwitter,
+	FaGoogleScholar // Import Google Scholar icon
 } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
@@ -62,4 +63,5 @@ export const iconLibrary: Record<string, IconType> = {
 	github: FaGithub,
 	linkedin: FaLinkedin,
 	x: FaXTwitter,
+	googleScholar: FaGoogleScholar // Add Google Scholar icon to the library
 };

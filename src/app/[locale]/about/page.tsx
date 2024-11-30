@@ -43,27 +43,29 @@ export default function About(
 ) {
     unstable_setRequestLocale(locale);
     const t = useTranslations();
-    const {person, about, social } = renderContent(t);
+    const {person, about, social, work } = renderContent(t);
+    const truncate = (str, n) => (str.length > n ? `${str.substr(0, n - 1)}...` : str);
+
     const structure = [
         { 
             title: about.intro.title,
             display: about.intro.display,
-            items: []
+            items: [] // No subItems for intro
         },
         { 
             title: about.work.title,
             display: about.work.display,
-            items: about.work.experiences.map(experience => experience.company)
+            items: about.work.experiences.map(experience => truncate(experience.company, 22)) // Truncate long subItems
         },
         { 
             title: about.studies.title,
             display: about.studies.display,
-            items: about.studies.institutions.map(institution => institution.name)
+            items: about.studies.institutions.map(institution => truncate(institution.name, 25)) // Truncate long subItems
         },
         { 
             title: about.technical.title,
             display: about.technical.display,
-            items: about.technical.skills.map(skill => skill.title)
+            items: about.technical.skills.map(skill => truncate(skill.title, 25)) // Truncate long subItems
         },
     ]
     return (
