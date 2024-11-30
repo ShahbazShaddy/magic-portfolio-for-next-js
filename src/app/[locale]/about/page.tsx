@@ -55,17 +55,17 @@ export default function About(
         { 
             title: about.work.title,
             display: about.work.display,
-            items: about.work.experiences.map(experience => truncate(experience.company, 22)) // Truncate long subItems
+            items: about.work.experiences.map(experience => truncate(experience.company, 15)) // Truncate long subItems
         },
         { 
             title: about.studies.title,
             display: about.studies.display,
-            items: about.studies.institutions.map(institution => truncate(institution.name, 25)) // Truncate long subItems
+            items: about.studies.institutions.map(institution => truncate(institution.name, 19)) // Truncate long subItems
         },
         { 
             title: about.technical.title,
             display: about.technical.display,
-            items: about.technical.skills.map(skill => truncate(skill.title, 25)) // Truncate long subItems
+            items: about.technical.skills.map(skill => truncate(skill.title, 20)) // Truncate long subItems
         },
     ]
     return (
