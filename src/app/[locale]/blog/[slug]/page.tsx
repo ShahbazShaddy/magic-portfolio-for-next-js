@@ -58,7 +58,7 @@ export function generateMetadata({ params: { slug, locale } }: BlogParams) {
 			title,
 			description,
 			type: 'article',
-			publishedTime,
+			// publishedTime,
 			url: `https://${baseURL}/${locale}/blog/${post.slug}`,
 			images: [
 				{
@@ -118,7 +118,7 @@ export default function Blog({ params }: BlogParams) {
 				variant="tertiary"
 				size="s"
 				prefixIcon="chevronLeft">
-				Posts
+				Awards & Conferences
 			</Button>
 			<Heading
 				variant="display-strong-s">

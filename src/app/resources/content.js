@@ -8,7 +8,7 @@ const person = {
     },
     role:      'Physicist',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Karachi',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    // location:  'Asia/Karachi',        // Revert to 'Asia/Karachi' to avoid invalid time zone error
     languages: ['English', 'Urdu']  // optional: Leave the array empty if you don't want to display languages
 }
 
@@ -47,7 +47,7 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Physicist | Researcher | Computing Enthusiast</>,
+    headline: <>Physicist | Researcher & Computing Enthusiast</>,
     subline: <>I'm Dilawar, a physicist with a background in material physics research and hands-on experience in<InlineCode>3D Printing</InlineCode>.</>
 }
 
@@ -81,7 +81,7 @@ const about = {
                 role: 'Research Assistant',
                 achievements: [
                     <>Conducted research on material physics and advanced manufacturing techniques.</>,
-                    <>Published research papers in peer-reviewed journals.</>,
+                    <>Research papers in peer-reviewed journals are in progress.</>,
                     <>Collaborated with a team of researchers to develop innovative solutions.</>
                 ],
                 images: []
@@ -116,7 +116,7 @@ const about = {
         institutions: [
             {
                 name: 'University of the Punjab, Lahore, Pakistan',
-                description: <>Completed a Master's degree in Physics with a focus on material physics and advanced manufacturing techniques. Engaged in various research projects and published papers in peer-reviewed journals.</>,
+                description: <>Completed a Master's degree in Physics with a focus on material physics and advanced manufacturing techniques. Engaged in various research projects and in progres research papers.</>,
             },
             {
                 name: 'University of Education, Lahore, Pakistan',
