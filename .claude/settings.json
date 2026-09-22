@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(npm run *)",
+      "Bash(grep -o '.\\\\{80\\\\}University of the Punjab, Lahore.\\\\{40\\\\}' about.html)"
+    ]
+  }
+}

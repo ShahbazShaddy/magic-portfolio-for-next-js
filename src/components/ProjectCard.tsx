@@ -11,6 +11,8 @@ interface ProjectCardProps {
     content: string;
     description: string;
     avatars: { src: string }[];
+    link?: string;
+    linkLabel?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,7 +21,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     content,
     description,
-    avatars
+    avatars,
+    link,
+    linkLabel
 }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
@@ -113,7 +117,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                         </Heading>
                     </Flex>
                 )}
-                {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
+                {(avatars?.length > 0 || description?.trim() || content?.trim() || link) && (
                     <Flex
                         flex={7} direction="column"
                         gap="16">
@@ -139,6 +143,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                     <Text
                                         variant="body-default-s">
                                        {t("projectCard.label")}
+                                    </Text>
+                            </SmartLink>
+                        )}
+                        {link && (
+                            <SmartLink
+                                suffixIcon="arrowUpRight"
+                                style={{margin: '0', width: 'fit-content'}}
+                                href={link}
+                                rel="noopener noreferrer">
+                                    <Text
+                                        variant="body-default-s">
+                                       {linkLabel || link}
                                     </Text>
                             </SmartLink>
                         )}

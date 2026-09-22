@@ -24,7 +24,7 @@ const social = [
     {
         name: 'Google Scholar',
         icon: 'googleScholar', // Use the Google Scholar icon
-        link: 'https://scholar.google.com/citations?user=dummy',
+        link: 'https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Light-Controlled+Defect+Engineering+for+Enhanced+Superconductivity+in+Layered+Nickelate+Quantum+Materials&btnG=',
     },
     {
         name: 'LinkedIn',
@@ -77,11 +77,10 @@ const about = {
         experiences: [
             {
                 company: 'Department of Physics, University of the Punjab',
-                timeframe: '2023 - Present',
+                timeframe: '2023 - 2025',
                 role: 'Research Assistant',
                 achievements: [
                     <>Conducted research on material physics and advanced manufacturing techniques.</>,
-                    <>Research papers in peer-reviewed journals are in progress.</>,
                     <>Collaborated with a team of researchers to develop innovative solutions.</>
                 ],
                 images: []
@@ -115,11 +114,13 @@ const about = {
         title: 'Education',
         institutions: [
             {
-                name: 'University of the Punjab, Lahore, Pakistan',
-                description: <>Completed a Master's degree in Physics with a focus on material physics and advanced manufacturing techniques. Engaged in various research projects and in progres research papers.</>,
+                name: 'National Formosa University',
+                timeframe: 'In progress',
+                description: <>Pursuing a Master's degree in Materials Science and Engineering at National Formosa University, with a research focus on additive manufacturing, photocurable polymer–ceramic composites, and 3D-printed biomimetic scaffolds for bone tissue engineering. Engaged in research involving advanced materials characterization, hydrogel development, and LCD-based 3D printing technologies.</>,
             },
             {
                 name: 'University of Education, Lahore, Pakistan',
+                timeframe: '2020 - 2024',
                 description: <>Completed a Bachelor’s degree in Physics, gaining a strong foundation in theoretical and experimental physics. Participated in academic seminars and workshops to enhance knowledge and skills.</>,
             }
         ]

@@ -132,6 +132,7 @@ const components = {
     img: createImage as any,
     a: CustomLink as any,
     Table,
+    SmartImage,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
