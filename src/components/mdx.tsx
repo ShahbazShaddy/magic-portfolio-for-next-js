@@ -79,6 +79,43 @@ function createImage({ alt, src, ...props }: SmartImageProps & { src: string }) 
         )
 }
 
+type ThumbnailProps = {
+    src: string;
+    alt?: string;
+    aspectRatio?: string;
+    maxWidth?: string;
+};
+
+/**
+ * A smaller, clickable-to-enlarge image for use inside MDX content (e.g. a
+ * certificate). next-mdx-remote v6 blocks JS expression props like
+ * `style={{...}}` in MDX by default (for security), so the sizing/border
+ * styling lives here in real TSX instead of in the .mdx file. Usage in MDX
+ * takes only plain string literal props, e.g.:
+ * `<Thumbnail src="/images/gallery/cert.jpg" alt="..." aspectRatio="1023 / 1446"/>`
+ */
+function createThumbnail({ alt = '', src, aspectRatio = '1 / 1.41', maxWidth = '240px' }: ThumbnailProps) {
+    if (!src) {
+        console.error("SmartImage requires a valid 'src' property.");
+        return null;
+    }
+
+    return (
+        <SmartImage
+            className="my-20"
+            enlarge
+            radius="m"
+            aspectRatio={aspectRatio}
+            alt={alt}
+            src={src}
+            sizes={maxWidth}
+            style={{
+                maxWidth,
+                border: '1px solid var(--neutral-alpha-weak)'
+            }}/>
+        )
+}
+
 function slugify(str: string): string {
     return str
         .toString()
@@ -133,6 +170,7 @@ const components = {
     a: CustomLink as any,
     Table,
     SmartImage,
+    Thumbnail: createThumbnail as any,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
