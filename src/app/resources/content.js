@@ -7,7 +7,7 @@ const person = {
         return `${this.firstName} ${this.lastName}`;
     },
     role:      'Physicist',
-    avatar:    '/images/avatar.jpg',
+    avatar:    '/images/avatar1.png',
     // location:  'Asia/Karachi',        // Revert to 'Asia/Karachi' to avoid invalid time zone error
     languages: ['English', 'Urdu']  // optional: Leave the array empty if you don't want to display languages
 }
